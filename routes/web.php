@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+    Auth::routes();
+    Route::get('/landing', 'TimeTrackerController@landing');
+    Route::get('/landing2', 'TimeTrackerController@getUser');
+    Route::post('/timeIn','TimerController@timeIn');
+    //Route::get('/home', 'TimeTrackerController@landing');
+    // Route::get('/exam', 'TimeTrackerController@index');
+    // Route::post('/exam', 'TimeTrackerController@store');
+    // Route::post('/projects/{id}/timers/stop', 'TimerController@stopRunning');
+    // Route::post('/projects/{id}/timers', 'TimerController@store');
+    // Route::get('/project/timers/active', 'TimerController@running');
